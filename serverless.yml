@@ -1,10 +1,12 @@
-service: serverless-simple-http-endpoint
+service: screenshot
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
 provider:
   name: aws
   runtime: nodejs4.3
+  memorySize: 128 # Overwrite the default memory size. Default is 1024
+  region: eu-west-1
 
 functions:
   currentTime:
